@@ -11,14 +11,7 @@ public class PropertyFile  extends ProjectSpecificMethods{
 	public String propertyValue(String element) throws IOException {
 		prop= new Properties();
 		fis= new FileInputStream(System.getProperty("./dataSource/config.properties"));
-		
 		prop.load(fis);
-		
-		
 		return prop.getProperty(element);
-		
-		
-	
-
 	}
 }
