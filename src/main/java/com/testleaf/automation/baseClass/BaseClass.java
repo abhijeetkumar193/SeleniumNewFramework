@@ -1,22 +1,60 @@
 package com.testleaf.automation.baseClass;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.testleaf.automation.baseClass.api.BrowserAPI;
 import com.testleaf.automation.baseClass.api.webelementAPI;
+import com.testleaf.automation.utils.ReporterClass;
 
-public class BaseClass  implements BrowserAPI,webelementAPI{
+public class BaseClass extends ReporterClass implements BrowserAPI,webelementAPI{
 
 	
-	public ChromeDriver driver;
+	
+	public static Properties prop;
+	//public FileInputStream fis;
+	public  static RemoteWebDriver driver;
+	
+	
+	
+	public void Loadproperty() throws IOException {
+		prop= new Properties();
+		prop.load(new FileInputStream(new File("./dataSource/config.properties")));
+		//return prop.getProperty(element);
+	}
+	
+	public String getValueFrompropertyFile(String key)
+	{
+		return prop.getProperty(key);
+	}
+	
+	
+	/*@Override
+	public void openBrowser(String browser) {
+		// TODO Auto-generated method stub
+		
+		switch(browser.toLowerCase()) {
+		
+		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			driver= new ChromeDriver();
+		}
+	}*/
+	
 	@Override
 	public WebElement locateElement(String locatorType, String locatorValue) {
 		// TODO Auto-generated method stub
@@ -31,7 +69,7 @@ public class BaseClass  implements BrowserAPI,webelementAPI{
 		case "linktext":
 			return driver.findElementById(locatorValue);
 		case "xpath":
-		return 	driver.findElementByXPath(locatorType);
+		return 	driver.findElementByXPath("//*[contains(text(),"+locatorValue+")]");
 		case "partialtext":
 			return driver.findElementByPartialLinkText(locatorValue);
 		case "tagname":
@@ -41,6 +79,10 @@ public class BaseClass  implements BrowserAPI,webelementAPI{
 		return null;
 		
 	}
+	
+	
+	
+	
 
 	@Override
 	public String getTestFromElement(WebElement ele) {
@@ -60,6 +102,14 @@ public class BaseClass  implements BrowserAPI,webelementAPI{
 		// TODO Auto-generated method stub
 		ele.clear();
 		ele.sendKeys(enterValue);
+		
+	}
+	
+	@Override
+	public void enterValueWithKeyPress(WebElement ele, String enterValue,String keyPress) {
+		// TODO Auto-generated method stub
+		ele.clear();
+		ele.sendKeys(enterValue,Keys.TAB);
 		
 	}
 
@@ -184,34 +234,6 @@ switch(locatorType.toLowerCase()) {
 	}
 
 	@Override
-	public void openBrowser() {
-		// TODO Auto-generated method stub
-		driver= new ChromeDriver();
-		
-	}
-
-	@Override
-	public void closeBrowser() {
-		// TODO Auto-generated method stub
-		driver.close();
-		
-	}
-
-	@Override
-	public void implicitWait() {
-		// TODO Auto-generated method stub
-		driver.manage().timeouts().implicitlyWait(30,  TimeUnit.SECONDS);
-		
-	}
-
-	@Override
-	public void maximiseBrowser() {
-		// TODO Auto-generated method stub
-		driver.manage().window().maximize();
-		
-	}
-
-	@Override
 	public void switchToParentWindow() {
 		// TODO Auto-generated method stub
 		String CurrentWindowHandle= driver.getWindowHandle();
@@ -228,6 +250,24 @@ switch(locatorType.toLowerCase()) {
 		
 		
 	}
+@Override
+	public void startApp()
+	{
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		driver= new ChromeDriver();
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		
+	}
+
+@Override
+public void closeApp() {
+	driver.close();
+	
+}
+
 
 	
 
