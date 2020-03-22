@@ -24,6 +24,7 @@ public interface webelementAPI {
 	public void SwitchTowindowsHandling(int Winum);
 	public void switchToParentWindow();
 	public void alertHandling(String alerthandle);
+	public void enterValueWithKeyPress(WebElement ele, String enterValue,String keyPress);
 	
 	
 }

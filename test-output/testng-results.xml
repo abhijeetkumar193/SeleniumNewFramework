@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="86580" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:34:21Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="86580" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:34:21Z">
+      <class name="com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods">
+        <test-method status="PASS" signature="loadPropertiesFiles()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="loadPropertiesFiles" is-config="true" duration-ms="50" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPropertiesFiles -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="setUpClass" is-config="true" duration-ms="191" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="beforeClass" is-config="true" duration-ms="199" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="openApplication" is-config="true" duration-ms="14950" started-at="2020-03-21T20:32:55Z" finished-at="2020-03-21T20:33:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="runScenario" duration-ms="8508" started-at="2020-03-21T20:33:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-03-21T20:33:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[": TC-001_Getting the trains availability between stations"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the erail webpage"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="closeApp" is-config="true" duration-ms="5241" started-at="2020-03-21T20:33:19Z" finished-at="2020-03-21T20:33:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="openApplication" is-config="true" duration-ms="12689" started-at="2020-03-21T20:33:24Z" finished-at="2020-03-21T20:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="runScenario" duration-ms="39529" started-at="2020-03-21T20:33:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-03-21T20:34:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC-002_Finding the number of Trains"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the erail webpage"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="closeApp" is-config="true" duration-ms="5149" started-at="2020-03-21T20:34:16Z" finished-at="2020-03-21T20:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="ExtentReports()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="ExtentReports" is-config="true" duration-ms="3" started-at="2020-03-21T20:34:21Z" finished-at="2020-03-21T20:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExtentReports -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods@49fd9b]" name="tearDownClass" is-config="true" duration-ms="6" started-at="2020-03-21T20:34:21Z" finished-at="2020-03-21T20:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
