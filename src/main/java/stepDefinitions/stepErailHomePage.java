@@ -24,7 +24,8 @@ public class stepErailHomePage extends BaseClass{
 	{
 		String keypress="";
 		//enterValue(locateElement("id", prop.getProperty("ToStationId")), from, "keypress");
-		enterValueWithKeyPress(locateElement("id",prop.getProperty("ToStationId") ), from, keypress);
+		//enterValueWithKeyPress(locateElement("id",prop.getProperty("ToStationId") ), from, keypress);
+		enterValueWithKeyPress(locateElement("id",prop.getProperty("ToStation") ), from, keypress);
 		Thread.sleep(2000);
 		
 	}

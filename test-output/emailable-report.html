@@ -8,12 +8,24 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">86,580</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Extent Report testing</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">43,862</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1584822817047</td><td rowspan="2">39529</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Extent Report testing &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1584875945501</td><td rowspan="2">596</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;TC-002_Finding the number of Trains&quot;</td><td>&quot;Testing the erail webpage&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;: TC-001_Getting the trains availability between stations&quot;</td><td>&quot;Testing the erail webpage&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Extent Report testing</h2><h3 id="m0">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;: TC-001_Getting the trains availability between stations&quot;</td><td>&quot;Testing the erail webpage&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IllegalArgumentException: Cannot find elements when the selector is null.
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:320)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at com.testleaf.automation.baseClass.BaseClass.locateElement(BaseClass.java:67)
+	at stepDefinitions.stepErailHomePage.enter_the_to_station(stepErailHomePage.java:28)
+	at ✽.Enter the Chennai station(.\src\test\java\features\TestLeafHomePage.feature:5)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;TC-002_Finding the number of Trains&quot;</td><td>&quot;Testing the erail webpage&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IllegalArgumentException: Cannot find elements when the selector is null.
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:320)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at com.testleaf.automation.baseClass.BaseClass.locateElement(BaseClass.java:67)
+	at stepDefinitions.stepErailHomePage.enter_the_to_station(stepErailHomePage.java:28)
+	at ✽.Enter the Chennai station(.\src\test\java\features\TestLeafHomePage.feature:17)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

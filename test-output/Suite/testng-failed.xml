@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="ExtentReportlistener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Extent Report testing(failed)">
     <classes>
       <class name="com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods">
         <methods>
@@ -9,12 +12,10 @@
           <include name="closeApp"/>
           <include name="setUpClass"/>
           <include name="loadPropertiesFiles"/>
-          <include name="runScenario"/>
-          <include name="ExtentReports"/>
-          <include name="beforeClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Extent Report testing(failed) -->
+</suite> <!-- Failed suite [Suite] -->

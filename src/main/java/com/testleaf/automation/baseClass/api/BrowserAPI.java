@@ -4,5 +4,6 @@ public interface BrowserAPI{
 	
 	public void startApp();
 	public void closeApp();
+	//public String getScreenshot(String screenshotName);
 
 }

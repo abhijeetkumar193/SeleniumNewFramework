@@ -2,32 +2,35 @@ package com.testleaf.automation.baseClass;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.testleaf.automation.ProjectSpecificMethods.ProjectSpecificMethods;
 import com.testleaf.automation.baseClass.api.BrowserAPI;
 import com.testleaf.automation.baseClass.api.webelementAPI;
-import com.testleaf.automation.utils.ReporterClass;
 
-public class BaseClass extends ReporterClass implements BrowserAPI,webelementAPI{
-
-	
-	
+public class BaseClass extends ProjectSpecificMethods implements BrowserAPI,webelementAPI{
 	public static Properties prop;
 	//public FileInputStream fis;
 	public  static RemoteWebDriver driver;
+	
 	
 	
 	
@@ -246,10 +249,11 @@ switch(locatorType.toLowerCase()) {
 			}
 		}
 		
-		
-		
-		
 	}
+		
+		
+		
+	
 @Override
 	public void startApp()
 	{
@@ -266,6 +270,26 @@ switch(locatorType.toLowerCase()) {
 public void closeApp() {
 	driver.close();
 	
+}
+
+
+public static String getScreenshot(String screenshotName) {
+	// TODO Auto-generated method stub
+	String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+	TakesScreenshot ts = (TakesScreenshot) driver;
+	File source = ts.getScreenshotAs(OutputType.FILE);
+	// after execution, you could see a folder "FailedTestsScreenshots"
+	// under src folder
+	String destination = System.getProperty("user.dir") + "/snaps/" + screenshotName + dateName
+			+ ".jpeg";
+	File finalDestination = new File(destination);
+	try {
+		FileUtils.copyFile(source, finalDestination);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return destination;
 }
 
 
