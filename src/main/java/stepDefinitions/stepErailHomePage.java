@@ -27,7 +27,8 @@ public class stepErailHomePage extends BaseClass{
 		//enterValueWithKeyPress(locateElement("id",prop.getProperty("ToStationId") ), from, keypress);
 		enterValueWithKeyPress(locateElement("id",prop.getProperty("ToStation") ), from, keypress);
 		Thread.sleep(2000);
-		syso("new line has been added")
+		syso("new line has been added");
+		syso("second line has been added")
 		
 	}
 	
